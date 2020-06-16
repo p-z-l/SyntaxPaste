@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		B32C8E072498F880003562C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E052498F880003562C9 /* Main.storyboard */; };
 		B32C8E4B24990810003562C9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E4A24990810003562C9 /* README.md */; };
 		B32C8E4D24990892003562C9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E4C24990892003562C9 /* LICENSE.txt */; };
+		B372606424998AAE00C037A1 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = B372606324998AAE00C037A1 /* Highlightr */; };
+		B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,7 @@
 		B32C8E092498F880003562C9 /* SyntaxPaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SyntaxPaste.entitlements; sourceTree = "<group>"; };
 		B32C8E4A24990810003562C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B32C8E4C24990892003562C9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B372606424998AAE00C037A1 /* Highlightr in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				B32C8DFC2498F87F003562C9 /* AppDelegate.swift */,
+				B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */,
 				B32C8E002498F880003562C9 /* Assets.xcassets */,
 				B32C8E052498F880003562C9 /* Main.storyboard */,
 				B32C8E082498F880003562C9 /* Info.plist */,
@@ -93,6 +98,9 @@
 			dependencies = (
 			);
 			name = SyntaxPaste;
+			packageProductDependencies = (
+				B372606324998AAE00C037A1 /* Highlightr */,
+			);
 			productName = SyntaxPaste;
 			productReference = B32C8DF92498F87F003562C9 /* SyntaxPaste.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +129,9 @@
 				Base,
 			);
 			mainGroup = B32C8DF02498F87F003562C9;
+			packageReferences = (
+				B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */,
+			);
 			productRefGroup = B32C8DFA2498F87F003562C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32C8DFD2498F87F003562C9 /* AppDelegate.swift in Sources */,
+				B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/helje5/Highlightr.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B372606324998AAE00C037A1 /* Highlightr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */;
+			productName = Highlightr;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B32C8DF12498F87F003562C9 /* Project object */;
 }

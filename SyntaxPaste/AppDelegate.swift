@@ -8,6 +8,7 @@
 
 import Cocoa
 import SwiftUI
+import Highlightr
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,13 +19,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem!
     
+    private let highlightr = Highlightr()
+    
+    private let pasteboard = NSPasteboard.general
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupStatusItem()
         setupMenu()
     }
     
-    @objc private func sayHello() { // TODO
-        print("highlight!")
+    @objc private func highlight() {
+        let code = pasteboard.text
+        guard let attributed = highlightr?.highlight(code) else { return }
+        pasteboard.clearContents()
+        pasteboard.copyAttributedString(attributed)
     }
     
     private func setupStatusItem() {
@@ -37,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupMenu() {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(sayHello), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: ""))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
