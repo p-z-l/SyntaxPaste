@@ -2,7 +2,13 @@
   "images" : [
     {
       "filename" : "AppIcon.png",
-      "idiom" : "mac"
+      "idiom" : "mac",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "AppIcon-1.png",
+      "idiom" : "mac",
+      "scale" : "2x"
     }
   ],
   "info" : {
@@ -10,6 +16,7 @@
     "version" : 1
   },
   "properties" : {
+    "auto-scaling" : "auto",
     "template-rendering-intent" : "template"
   }
 }
