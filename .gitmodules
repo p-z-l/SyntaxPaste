@@ -1,3 +1,6 @@
 [submodule "Submodules/Highlightr"]
 	path = Submodules/Highlightr
 	url = https://github.com/raspu/Highlightr
+[submodule "Submodules/HotKey"]
+	path = Submodules/HotKey
+	url = https://github.com/soffes/HotKey

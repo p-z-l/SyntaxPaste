@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Submodules/Highlightr/Highlightr.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Submodules/HotKey/HotKey.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -20,6 +20,8 @@
 		B3BB00C5249A190D00164CFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB00C4249A190D00164CFB /* Constants.swift */; };
 		B3BB00C8249A1A9400164CFB /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00C7249A1A9400164CFB /* Highlightr.framework */; };
 		B3BB00C9249A1A9400164CFB /* Highlightr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00C7249A1A9400164CFB /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3BB00CC249A1E5000164CFB /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00CB249A1E5000164CFB /* HotKey.framework */; };
+		B3BB00CD249A1E5000164CFB /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00CB249A1E5000164CFB /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B3BB00CD249A1E5000164CFB /* HotKey.framework in Embed Frameworks */,
 				B3BB00C9249A1A9400164CFB /* Highlightr.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +55,7 @@
 		B3BB00C22499C7CB00164CFB /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		B3BB00C4249A190D00164CFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3BB00C7249A1A9400164CFB /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3BB00CB249A1E5000164CFB /* HotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BB00CC249A1E5000164CFB /* HotKey.framework in Frameworks */,
 				B3BB00C8249A1A9400164CFB /* Highlightr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +119,7 @@
 		B3BB00C6249A1A9400164CFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3BB00CB249A1E5000164CFB /* HotKey.framework */,
 				B3BB00C7249A1A9400164CFB /* Highlightr.framework */,
 			);
 			name = Frameworks;
