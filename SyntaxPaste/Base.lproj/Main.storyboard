@@ -696,25 +696,66 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="k0B-tz-4zY" kind="relationship" relationship="window.shadowedContentViewController" id="9iE-1U-ppQ"/>
+                        <segue destination="C3e-MT-WLm" kind="relationship" relationship="window.shadowedContentViewController" id="gxN-2e-RF3"/>
                     </connections>
                 </windowController>
                 <customObject id="raV-gq-jCr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="22.5" y="292"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="QR3-rk-Q4k">
+        <!--Preferences View Controller-->
+        <scene sceneID="bhN-79-cBx">
             <objects>
-                <viewController id="k0B-tz-4zY" sceneMemberID="viewController">
-                    <view key="view" id="r3f-dp-Rs2">
+                <customObject id="cKc-qe-dkM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="C3e-MT-WLm" customClass="PreferencesViewController" customModule="SyntaxPaste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="1ht-7M-5Av">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Uj-1F-U6B">
+                                <rect key="frame" x="18" y="264" width="414" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="tar-c7-B4R"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Syntax Theme:" id="zGm-bw-ZVW">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7aI-YO-6Hb">
+                                <rect key="frame" x="18" y="232" width="305" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Gln-NS-pY6"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="atom-one-dark" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="YXY-zZ-oZy" id="yHb-1E-ll3">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="n3q-SS-Lfa">
+                                        <items>
+                                            <menuItem title="atom-one-dark" state="on" id="YXY-zZ-oZy"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="themeSelected:" target="C3e-MT-WLm" id="Kjr-Vc-bP6"/>
+                                </connections>
+                            </popUpButton>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4Uj-1F-U6B" firstAttribute="top" secondItem="1ht-7M-5Av" secondAttribute="top" constant="20" id="7TG-mZ-gdt"/>
+                            <constraint firstItem="4Uj-1F-U6B" firstAttribute="leading" secondItem="1ht-7M-5Av" secondAttribute="leading" constant="20" id="831-Nr-thS"/>
+                            <constraint firstItem="7aI-YO-6Hb" firstAttribute="leading" secondItem="1ht-7M-5Av" secondAttribute="leading" constant="20" id="WgA-2k-lRa"/>
+                            <constraint firstItem="7aI-YO-6Hb" firstAttribute="top" secondItem="4Uj-1F-U6B" secondAttribute="bottom" constant="8" id="kr3-q9-p0E"/>
+                            <constraint firstAttribute="trailing" secondItem="4Uj-1F-U6B" secondAttribute="trailing" constant="20" id="oEK-nr-hQW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="themePopUpBt" destination="7aI-YO-6Hb" id="Brv-pr-a7n"/>
+                    </connections>
                 </viewController>
-                <customObject id="6d4-Za-bQW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="768"/>
+            <point key="canvasLocation" x="22" y="788"/>
         </scene>
     </scenes>
 </document>

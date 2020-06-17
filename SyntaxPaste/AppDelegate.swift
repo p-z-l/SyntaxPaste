@@ -29,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc private func highlight() {
         let code = pasteboard.text
+        print(Preferences.themeName)
+        highlightr?.setTheme(to: Preferences.themeName)
         guard let attributed = highlightr?.highlight(code) else { return }
         pasteboard.clearContents()
         pasteboard.copyAttributedString(attributed)
@@ -50,8 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         
         menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: ""))
-//        Preferences window not finished, prefs option will be availible soon
-//        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         

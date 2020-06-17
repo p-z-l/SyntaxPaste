@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,10 +13,28 @@
 		B32C8E072498F880003562C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E052498F880003562C9 /* Main.storyboard */; };
 		B32C8E4B24990810003562C9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E4A24990810003562C9 /* README.md */; };
 		B32C8E4D24990892003562C9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E4C24990892003562C9 /* LICENSE.txt */; };
-		B372606424998AAE00C037A1 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = B372606324998AAE00C037A1 /* Highlightr */; };
+		B34A569F2499C03500666804 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A569E2499C03500666804 /* Preferences.swift */; };
 		B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */; };
 		B37260682499911C00C037A1 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37260672499911C00C037A1 /* PreferencesWindowController.swift */; };
+		B3BB00C32499C7CB00164CFB /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB00C22499C7CB00164CFB /* PreferencesViewController.swift */; };
+		B3BB00C5249A190D00164CFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BB00C4249A190D00164CFB /* Constants.swift */; };
+		B3BB00C8249A1A9400164CFB /* Highlightr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00C7249A1A9400164CFB /* Highlightr.framework */; };
+		B3BB00C9249A1A9400164CFB /* Highlightr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00C7249A1A9400164CFB /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3BB00CA249A1A9400164CFB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3BB00C9249A1A9400164CFB /* Highlightr.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B32C8DF92498F87F003562C9 /* SyntaxPaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyntaxPaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,8 +46,12 @@
 		B32C8E092498F880003562C9 /* SyntaxPaste.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SyntaxPaste.entitlements; sourceTree = "<group>"; };
 		B32C8E4A24990810003562C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B32C8E4C24990892003562C9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		B34A569E2499C03500666804 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+Extension.swift"; sourceTree = "<group>"; };
 		B37260672499911C00C037A1 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		B3BB00C22499C7CB00164CFB /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		B3BB00C4249A190D00164CFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3BB00C7249A1A9400164CFB /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B372606424998AAE00C037A1 /* Highlightr in Frameworks */,
+				B3BB00C8249A1A9400164CFB /* Highlightr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +73,7 @@
 				B32C8E4C24990892003562C9 /* LICENSE.txt */,
 				B32C8DFB2498F87F003562C9 /* SyntaxPaste */,
 				B32C8DFA2498F87F003562C9 /* Products */,
+				B3BB00C6249A1A9400164CFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				B32C8DFC2498F87F003562C9 /* AppDelegate.swift */,
+				B34A569E2499C03500666804 /* Preferences.swift */,
+				B3BB00C4249A190D00164CFB /* Constants.swift */,
 				B37260672499911C00C037A1 /* PreferencesWindowController.swift */,
+				B3BB00C22499C7CB00164CFB /* PreferencesViewController.swift */,
 				B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */,
 				B32C8E002498F880003562C9 /* Assets.xcassets */,
 				B32C8E052498F880003562C9 /* Main.storyboard */,
@@ -85,6 +111,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B3BB00C6249A1A9400164CFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3BB00C7249A1A9400164CFB /* Highlightr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,6 +129,7 @@
 				B32C8DF52498F87F003562C9 /* Sources */,
 				B32C8DF62498F87F003562C9 /* Frameworks */,
 				B32C8DF72498F87F003562C9 /* Resources */,
+				B3BB00CA249A1A9400164CFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,7 +137,6 @@
 			);
 			name = SyntaxPaste;
 			packageProductDependencies = (
-				B372606324998AAE00C037A1 /* Highlightr */,
 			);
 			productName = SyntaxPaste;
 			productReference = B32C8DF92498F87F003562C9 /* SyntaxPaste.app */;
@@ -133,7 +167,6 @@
 			);
 			mainGroup = B32C8DF02498F87F003562C9;
 			packageReferences = (
-				B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */,
 			);
 			productRefGroup = B32C8DFA2498F87F003562C9 /* Products */;
 			projectDirPath = "";
@@ -164,9 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3BB00C32499C7CB00164CFB /* PreferencesViewController.swift in Sources */,
 				B37260682499911C00C037A1 /* PreferencesWindowController.swift in Sources */,
 				B32C8DFD2498F87F003562C9 /* AppDelegate.swift in Sources */,
+				B34A569F2499C03500666804 /* Preferences.swift in Sources */,
 				B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */,
+				B3BB00C5249A190D00164CFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,25 +401,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/helje5/Highlightr.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B372606324998AAE00C037A1 /* Highlightr */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B372606224998AAE00C037A1 /* XCRemoteSwiftPackageReference "Highlightr" */;
-			productName = Highlightr;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B32C8DF12498F87F003562C9 /* Project object */;
 }
