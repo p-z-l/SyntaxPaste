@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import SwiftUI
 import Highlightr
 
 @NSApplicationMain
@@ -35,6 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         pasteboard.copyAttributedString(attributed)
     }
     
+    @objc private func showPrefs() {
+        PreferencesWindowController.shared.window?.makeKeyAndOrderFront(self)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+    
     private func setupStatusItem() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem.button {
@@ -46,6 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu()
         
         menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: ""))
+//        Preferences window not finished, prefs option will be availible soon
+//        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         

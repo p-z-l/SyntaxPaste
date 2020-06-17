@@ -15,6 +15,7 @@
 		B32C8E4D24990892003562C9 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = B32C8E4C24990892003562C9 /* LICENSE.txt */; };
 		B372606424998AAE00C037A1 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = B372606324998AAE00C037A1 /* Highlightr */; };
 		B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */; };
+		B37260682499911C00C037A1 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37260672499911C00C037A1 /* PreferencesWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B32C8E4A24990810003562C9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B32C8E4C24990892003562C9 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+Extension.swift"; sourceTree = "<group>"; };
+		B37260672499911C00C037A1 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				B32C8DFC2498F87F003562C9 /* AppDelegate.swift */,
+				B37260672499911C00C037A1 /* PreferencesWindowController.swift */,
 				B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */,
 				B32C8E002498F880003562C9 /* Assets.xcassets */,
 				B32C8E052498F880003562C9 /* Main.storyboard */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37260682499911C00C037A1 /* PreferencesWindowController.swift in Sources */,
 				B32C8DFD2498F87F003562C9 /* AppDelegate.swift in Sources */,
 				B372606624998CC900C037A1 /* NSPasteboard+Extension.swift in Sources */,
 			);
