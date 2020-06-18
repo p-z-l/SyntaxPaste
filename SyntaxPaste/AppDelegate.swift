@@ -34,7 +34,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc private func highlight() {
         let code = pasteboard.text
         highlightr?.setTheme(to: Preferences.themeName)
-        guard let attributed = highlightr?.highlight(code) else { return }
+        
+        guard var attributed = highlightr?.highlight(code) else { return }
+        
+        // Apply font
+        let mutableAttributed = NSMutableAttributedString(attributedString: attributed)
+        mutableAttributed.addAttributes([
+            NSAttributedString.Key.font : Preferences.font
+        ], range: NSRange(location: 0, length: mutableAttributed.length))
+        attributed = mutableAttributed
+        
         pasteboard.clearContents()
         pasteboard.copyAttributedString(attributed)
     }

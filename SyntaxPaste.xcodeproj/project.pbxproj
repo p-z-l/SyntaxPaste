@@ -22,6 +22,7 @@
 		B3BB00C9249A1A9400164CFB /* Highlightr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00C7249A1A9400164CFB /* Highlightr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3BB00CC249A1E5000164CFB /* HotKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00CB249A1E5000164CFB /* HotKey.framework */; };
 		B3BB00CD249A1E5000164CFB /* HotKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB00CB249A1E5000164CFB /* HotKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3CD1F1A249AFDC300F39256 /* NSFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CD1F19249AFDC300F39256 /* NSFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		B3BB00C4249A190D00164CFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B3BB00C7249A1A9400164CFB /* Highlightr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Highlightr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3BB00CB249A1E5000164CFB /* HotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3CD1F19249AFDC300F39256 /* NSFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				B3BB00C4249A190D00164CFB /* Constants.swift */,
 				B37260672499911C00C037A1 /* PreferencesWindowController.swift */,
 				B3BB00C22499C7CB00164CFB /* PreferencesViewController.swift */,
+				B3CD1F19249AFDC300F39256 /* NSFont+Extension.swift */,
 				B372606524998CC900C037A1 /* NSPasteboard+Extension.swift */,
 				B32C8E002498F880003562C9 /* Assets.xcassets */,
 				B32C8E052498F880003562C9 /* Main.storyboard */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3BB00C32499C7CB00164CFB /* PreferencesViewController.swift in Sources */,
+				B3CD1F1A249AFDC300F39256 /* NSFont+Extension.swift in Sources */,
 				B37260682499911C00C037A1 /* PreferencesWindowController.swift in Sources */,
 				B32C8DFD2498F87F003562C9 /* AppDelegate.swift in Sources */,
 				B34A569F2499C03500666804 /* Preferences.swift in Sources */,

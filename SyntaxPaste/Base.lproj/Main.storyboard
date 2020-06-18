@@ -741,16 +741,53 @@
                                     <action selector="themeSelected:" target="C3e-MT-WLm" id="Kjr-Vc-bP6"/>
                                 </connections>
                             </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-h4-ei8">
+                                <rect key="frame" x="20" y="209" width="35" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Font:" id="oTG-OV-uzm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="opf-8O-7tW">
+                                <rect key="frame" x="61" y="206" width="247" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="kns-hX-s5g"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="X5y-aH-FVz">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bzg-cU-iJi">
+                                <rect key="frame" x="310" y="199" width="126" height="32"/>
+                                <buttonCell key="cell" type="push" title="Choose font..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a5O-Eu-e6e">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseFont:" target="C3e-MT-WLm" id="Ena-3x-vcZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="4Uj-1F-U6B" firstAttribute="top" secondItem="1ht-7M-5Av" secondAttribute="top" constant="20" id="7TG-mZ-gdt"/>
                             <constraint firstItem="4Uj-1F-U6B" firstAttribute="leading" secondItem="1ht-7M-5Av" secondAttribute="leading" constant="20" id="831-Nr-thS"/>
+                            <constraint firstItem="opf-8O-7tW" firstAttribute="top" secondItem="7aI-YO-6Hb" secondAttribute="bottom" constant="8" id="UVQ-Du-ChG"/>
+                            <constraint firstItem="OsL-h4-ei8" firstAttribute="top" secondItem="7aI-YO-6Hb" secondAttribute="bottom" constant="10" id="V5T-Kg-neF"/>
                             <constraint firstItem="7aI-YO-6Hb" firstAttribute="leading" secondItem="1ht-7M-5Av" secondAttribute="leading" constant="20" id="WgA-2k-lRa"/>
                             <constraint firstItem="7aI-YO-6Hb" firstAttribute="top" secondItem="4Uj-1F-U6B" secondAttribute="bottom" constant="8" id="kr3-q9-p0E"/>
                             <constraint firstAttribute="trailing" secondItem="4Uj-1F-U6B" secondAttribute="trailing" constant="20" id="oEK-nr-hQW"/>
+                            <constraint firstItem="Bzg-cU-iJi" firstAttribute="top" secondItem="7aI-YO-6Hb" secondAttribute="bottom" constant="8" id="qpu-NA-mHj"/>
+                            <constraint firstItem="OsL-h4-ei8" firstAttribute="leading" secondItem="1ht-7M-5Av" secondAttribute="leading" constant="22" id="rN0-5f-6nF"/>
+                            <constraint firstItem="opf-8O-7tW" firstAttribute="leading" secondItem="OsL-h4-ei8" secondAttribute="trailing" constant="8" id="sg6-79-OQZ"/>
+                            <constraint firstItem="Bzg-cU-iJi" firstAttribute="leading" secondItem="opf-8O-7tW" secondAttribute="trailing" constant="8" id="sm0-5D-Ixn"/>
+                            <constraint firstAttribute="trailing" secondItem="Bzg-cU-iJi" secondAttribute="trailing" constant="20" id="vLG-4V-fz0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fontField" destination="opf-8O-7tW" id="Do4-QH-v7h"/>
                         <outlet property="themePopUpBt" destination="7aI-YO-6Hb" id="Brv-pr-a7n"/>
                     </connections>
                 </viewController>
