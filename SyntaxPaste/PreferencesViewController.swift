@@ -27,6 +27,5 @@ class PreferencesViewController: NSViewController {
     
     @IBAction func themeSelected(_ sender: NSPopUpButton) {
         Preferences.themeName = sender.selectedItem!.title
-        print(Preferences.themeName)
     }
 }

@@ -8,6 +8,7 @@
 
 import Cocoa
 import Highlightr
+import HotKey
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -22,14 +23,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private let pasteboard = NSPasteboard.general
     
+    lazy var hotkey = HotKey(key: .u, modifiers: .command)
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupStatusItem()
         setupMenu()
+        setupHotKey()
     }
     
     @objc private func highlight() {
         let code = pasteboard.text
-        print(Preferences.themeName)
         highlightr?.setTheme(to: Preferences.themeName)
         guard let attributed = highlightr?.highlight(code) else { return }
         pasteboard.clearContents()
@@ -51,12 +54,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupMenu() {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: "u"))
         menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem.menu = menu
+    }
+    
+    private func setupHotKey() {
+        hotkey.keyDownHandler = {
+            self.highlight()
+        }
     }
 }
 
