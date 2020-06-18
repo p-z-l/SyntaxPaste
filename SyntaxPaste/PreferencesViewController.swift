@@ -31,6 +31,11 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         fontPanel.orderFront(self)
     }
     
+    private var closeHandler: ()->Void = {}
+    func closed(_ handler: @escaping ()->Void) {
+        closeHandler = handler
+    }
+    
     func changeFont(_ sender: NSFontManager?) {
         
         guard sender != nil else { return }

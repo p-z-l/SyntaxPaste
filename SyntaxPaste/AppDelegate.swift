@@ -23,6 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private let pasteboard = NSPasteboard.general
     
+    private var prefsIsOpened = false
+    
     lazy var hotkey = HotKey(key: .x, modifiers: [.option,.control])
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -49,8 +51,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc private func showPrefs() {
+        guard !prefsIsOpened else {
+            NSApp.activate(ignoringOtherApps: true)
+            return
+        }
+        
+        prefsIsOpened = true
         PreferencesWindowController.shared.window?.makeKeyAndOrderFront(self)
         NSApp.activate(ignoringOtherApps: true)
+        
+        if let prefsVC = PreferencesWindowController.shared.window?.contentViewController as? PreferencesViewController {
+            prefsVC.closed {
+                self.prefsIsOpened = false
+            }
+        }
     }
     
     private func setupStatusItem() {
