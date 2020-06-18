@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private let pasteboard = NSPasteboard.general
     
-    lazy var hotkey = HotKey(key: .u, modifiers: .command)
+    lazy var hotkey = HotKey(key: .x, modifiers: [.option,.control])
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupStatusItem()
