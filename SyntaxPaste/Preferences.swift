@@ -15,11 +15,13 @@ class Preferences: NSObject {
     struct keys {
         static let themeName = "SyntaxPaste_themeName"
         static let fontKey = "SyntaxPaste_fontKey"
+        static let bgColorKey = "SyntaxPaste_bgColorKey"
     }
     
     struct defaultValues {
         static let themeName = "atom-one-dark"
         static let font = NSFont(name: "Menlo", size: NSFont.systemFontSize)!
+        static let useBgColor = false
     }
     
     static var themeName: String {
@@ -37,6 +39,15 @@ class Preferences: NSObject {
         }
         set {
             newValue.saveToUserDefaults(forKey: Preferences.keys.fontKey)
+        }
+    }
+    
+    static var useBgColor: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: Preferences.keys.bgColorKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Preferences.keys.bgColorKey)
         }
     }
 }

@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem!
     
-    private let highlightr = Highlightr()
+    private let highlightr = Highlightr()!
     
     private let pasteboard = NSPasteboard.general
     
@@ -33,15 +33,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc private func highlight() {
         let code = pasteboard.text
-        highlightr?.setTheme(to: Preferences.themeName)
+        highlightr.setTheme(to: Preferences.themeName)
         
-        guard var attributed = highlightr?.highlight(code) else { return }
+        guard var attributed = highlightr.highlight(code) else { return }
         
         // Apply font
         let mutableAttributed = NSMutableAttributedString(attributedString: attributed)
         mutableAttributed.addAttributes([
             NSAttributedString.Key.font : Preferences.font
         ], range: NSRange(location: 0, length: mutableAttributed.length))
+        // Apply background color if needed
+        if let themeBgColor = highlightr.theme.themeBackgroundColor {
+            mutableAttributed.addAttributes([
+                NSAttributedString.Key.backgroundColor : themeBgColor
+            ], range: NSRange(location: 0, length: mutableAttributed.length))
+        }
         attributed = mutableAttributed
         
         pasteboard.clearContents()

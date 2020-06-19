@@ -15,11 +15,14 @@ class PreferencesViewController: NSViewController, NSFontChanging {
     
     @IBOutlet weak var fontField: NSTextField!
     
+    @IBOutlet weak var bgColorCheckBox: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupThemePopUp()
         setupFontField()
+        setupBgColorCheckBox()
     }
     
     @IBAction func themeSelected(_ sender: NSPopUpButton) {
@@ -29,6 +32,14 @@ class PreferencesViewController: NSViewController, NSFontChanging {
     @IBAction func chooseFont(_ sender: NSButton) {
         let fontPanel = NSFontPanel.shared
         fontPanel.orderFront(self)
+    }
+    
+    @IBAction func changeUseBgColor(_ sender: NSButton) {
+        if sender.state == .on {
+            Preferences.useBgColor = true
+        } else {
+            Preferences.useBgColor = false
+        }
     }
     
     func changeFont(_ sender: NSFontManager?) {
@@ -53,5 +64,13 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         let font = Preferences.font
         fontField.font = font
         fontField.stringValue = "\(font.displayName!) : \(font.pointSize)pt"
+    }
+    
+    private func setupBgColorCheckBox() {
+        if Preferences.useBgColor {
+            bgColorCheckBox.state = .on
+        } else {
+            bgColorCheckBox.state = .off
+        }
     }
 }
