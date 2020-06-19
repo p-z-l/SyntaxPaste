@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  SyntaxPaste
+
+  Created by Peter Luo on 2020/6/19.
+  Copyright © 2020 Peter Luo. All rights reserved.
+*/
+
+"Highlight clipboard"="代码高亮剪贴板";
+"Preferences..."="偏好设置...";
+"Quit SyntaxPaste"="退出 SyntaxPaste";

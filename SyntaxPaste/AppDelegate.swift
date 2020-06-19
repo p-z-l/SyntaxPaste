@@ -69,12 +69,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupMenu() {
         let menu = NSMenu()
         
-        let highlightItem = NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: "x")
+        let highlightItem = NSMenuItem(title: "Highlight clipboard".localized, action: #selector(highlight), keyEquivalent: "x")
         highlightItem.keyEquivalentModifierMask = [.option,.control]
         menu.addItem(highlightItem)
-        menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
+        menu.addItem(NSMenuItem(title: "Preferences...".localized, action: #selector(showPrefs), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Quit SyntaxPaste".localized, action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         statusItem.menu = menu
     }
