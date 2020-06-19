@@ -40,7 +40,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         fontField.font = newFont
         fontField.stringValue = "\(newFont.displayName!) : \(newFont.pointSize)pt"
         
-        Preferences.font = font
+        Preferences.font = newFont
     }
     
     private func setupThemePopUp() {
