@@ -64,6 +64,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         let font = Preferences.font
         fontField.font = font
         fontField.stringValue = "\(font.displayName!) : \(font.pointSize)pt"
+        fontField.isEditable = false
     }
     
     private func setupBgColorCheckBox() {
