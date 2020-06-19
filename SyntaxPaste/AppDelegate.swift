@@ -43,7 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSAttributedString.Key.font : Preferences.font
         ], range: NSRange(location: 0, length: mutableAttributed.length))
         // Apply background color if needed
-        if let themeBgColor = highlightr.theme.themeBackgroundColor {
+        if Preferences.useBgColor, let themeBgColor = highlightr.theme.themeBackgroundColor {
             mutableAttributed.addAttributes([
                 NSAttributedString.Key.backgroundColor : themeBgColor
             ], range: NSRange(location: 0, length: mutableAttributed.length))
@@ -69,7 +69,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func setupMenu() {
         let menu = NSMenu()
         
-        menu.addItem(NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: "u"))
+        let highlightItem = NSMenuItem(title: "Highlight clipboard", action: #selector(highlight), keyEquivalent: "x")
+        highlightItem.keyEquivalentModifierMask = [.option,.control]
+        menu.addItem(highlightItem)
         menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(showPrefs), keyEquivalent: ","))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
