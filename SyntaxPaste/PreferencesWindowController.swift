@@ -8,10 +8,12 @@
 
 import Cocoa
 
+fileprivate let prefsWindowController = NSStoryboard(name: "Main", bundle: nil)
+    .instantiateController(withIdentifier: "PreferencesWindowController") as! PreferencesWindowController
+
 class PreferencesWindowController: NSWindowController {
+    
     static var shared: PreferencesWindowController {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let prefsWindowController = storyboard.instantiateController(withIdentifier: "PreferencesWindowController") as! PreferencesWindowController
         return prefsWindowController
     }
 }
