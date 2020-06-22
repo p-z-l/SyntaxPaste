@@ -753,8 +753,9 @@
                                             <rect key="frame" x="61" y="176" width="256" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="6ed-T3-Mg8"/>
+                                                <constraint firstAttribute="width" constant="256" id="Jsp-GN-QPI"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="X5y-aH-FVz">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="X5y-aH-FVz">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -771,7 +772,7 @@
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Uos-be-m5L">
-                                            <rect key="frame" x="18" y="152" width="300" height="18"/>
+                                            <rect key="frame" x="18" y="152" width="423" height="18"/>
                                             <buttonCell key="cell" type="check" title="Add background color to the highlighted code" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="xPr-6n-0gS">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -783,6 +784,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="4Uj-1F-U6B" secondAttribute="trailing" constant="20" id="4tn-JG-iyk"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uos-be-m5L" secondAttribute="trailing" constant="20" id="7jN-Wv-gi2"/>
                                         <constraint firstItem="Uos-be-m5L" firstAttribute="top" secondItem="opf-8O-7tW" secondAttribute="bottom" constant="8" id="CTF-Jo-ezH"/>
                                         <constraint firstItem="opf-8O-7tW" firstAttribute="leading" secondItem="OsL-h4-ei8" secondAttribute="trailing" constant="8" id="E75-2V-E4w"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7aI-YO-6Hb" secondAttribute="trailing" constant="20" id="FYv-8c-W9R"/>

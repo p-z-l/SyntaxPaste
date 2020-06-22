@@ -48,10 +48,8 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         
         let font = fontField.font!
         let newFont = sender!.convert(font)
-        fontField.font = newFont
-        fontField.stringValue = "\(newFont.displayName!) : \(newFont.pointSize)pt"
-        
         Preferences.font = newFont
+        updateFontField()
     }
     
     private func setupThemePopUp() {
@@ -61,10 +59,7 @@ class PreferencesViewController: NSViewController, NSFontChanging {
     }
     
     private func setupFontField() {
-        let font = Preferences.font
-        fontField.font = font
-        fontField.stringValue = "\(font.displayName!) : \(font.pointSize)pt"
-        fontField.isEditable = false
+        updateFontField()
     }
     
     private func setupBgColorCheckBox() {
@@ -73,5 +68,11 @@ class PreferencesViewController: NSViewController, NSFontChanging {
         } else {
             bgColorCheckBox.state = .off
         }
+    }
+    
+    private func updateFontField() {
+        let font = NSFont(descriptor: Preferences.font.fontDescriptor, size: NSFont.systemFontSize)
+        fontField.font = font
+        fontField.stringValue = "\(Preferences.font.displayName!) : \(Preferences.font.pointSize)pt"
     }
 }
